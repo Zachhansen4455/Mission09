@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 import teamNames from "./CollegeBasketballTeams.json";
 
+// set the props for the json file
 interface TeamProps {
   school: string;
   name: string;
@@ -17,6 +18,7 @@ interface TeamProps {
   longitude: number;
 }
 
+// function to dispay the heading for the page.
 function Heading() {
   return (
     <div>
@@ -26,6 +28,7 @@ function Heading() {
   );
 }
 
+// class that will make a card for each team with the required infomation.
 class Team extends React.Component<TeamProps> {
   render() {
     const oneTeam = this.props;
@@ -42,6 +45,7 @@ class Team extends React.Component<TeamProps> {
   }
 }
 
+// function that will make a list of all the teams in the json file
 function TeamList() {
   return (
     <div>
@@ -52,11 +56,11 @@ function TeamList() {
   );
 }
 
+// app function that will display the app.
 function App() {
   return (
     <div className="App">
       <Heading />
-      {/* <Card /> */}
       <TeamList />
     </div>
   );
